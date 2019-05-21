@@ -7,6 +7,7 @@
     "client-install": "npm install --prefix client",
     "start": "npm install && node server.js",
     "server": "nodemon server.js",
+    "chat": "nodemon /client/src/containers/chat/server/index.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client \"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && npm install && npm run build"
@@ -17,14 +18,17 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "concurrently": "^4.0.1",
-    "dotenv": "^6.2.0",
     "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
     "event-stream": "^4.0.1",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.4.0",
+    "lodash": "^4.17.11",
     "mongoose": "^5.3.11",
     "mysql": "^2.16.0",
-    "nodemailer": "^5.1.1"
+    "nodemailer": "^5.1.1",
+    "socket.io": "^2.2.0",
+    "uuidv4": "^4.0.0"
   },
   "devDependencies": {
     "cors": "^2.8.5",

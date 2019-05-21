@@ -21,6 +21,7 @@ import './styles/main.css';
 import { Switch, Route } from 'react-router-dom';
 import moment from 'moment'
 import 'moment/locale/ru';
+import ChatTaskContainer from './containers/chat/ChatTaskContainer';
 
 moment.locale('pt')
 
@@ -44,6 +45,7 @@ class App extends Component {
               <Route path="/admin" render={props => <GantTasksContainer {...props} />} />
               <Route exact path="/team" render={props => <AllTeamContainer userInfo={this.props.userInfo} {...props} />} />
               <Route exact path="/gant" render={props => <GantTasksContainer userInfo={this.props.userInfo} {...props} />} />
+              <Route exact path="/chat" render={props => <ChatTaskContainer userInfo={this.props.userInfo} {...props} />} />
               <Route exact path="/createproject" render={props => <CreateProjectContainer {...props} type="add" title="Novo Projeto"/>} />
               <Route path="/createproject/:id" render={props => <CreateProjectContainer {...props} type="edit" title="Editar Projeto"/>} />
               <Route exact path="/createtask" render={props => <CreateTaskContainer {...props} type="add" title="Nova Tarefa"/>} />
